@@ -1,5 +1,4 @@
 # MAIC
-========================================
 ``Minimization of Akaike's Information Criterion
 in Linear Regression Analysis via Mixed Intger Nonlinear Program"
 by Keiji Kimura and Hayato Waki
