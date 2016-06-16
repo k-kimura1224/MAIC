@@ -1,0 +1,1093 @@
+$(OBJDIR)/cmain.o: $(USRDIR)/src/cmain.c $(USRDIR)/src/reader_linereg.h \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/matrix.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/cblapack.h \
+ $(USRDIR)/src/linear_dependent.h \
+ $(USRDIR)/src/set_myparameter.h \
+ $(USRDIR)/src/relax_dposv.h \
+ $(USRDIR)/src/heur_forward.h \
+ $(USRDIR)/src/heur_backward.h \
+ $(USRDIR)/src/branch_myrule.h \
+ $(USRDIR)/src/branch_myfullstrong.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/reader_linereg.o: $(USRDIR)/src/reader_linereg.c $(USRDIR)/src/reader_linereg.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/probdata_linereg.o: $(USRDIR)/src/probdata_linereg.c \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/matrix.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/cblapack.h \
+ $(USRDIR)/src/linear_dependent.h \
+ $(USRDIR)/src/divide_data.h \
+ $(USRDIR)/src/normalization.h \
+ $(USRDIR)/src/read_data.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/relax_dposv.o: $(USRDIR)/src/relax_dposv.c \
+ $(USRDIR)/src/relax_dposv.h \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/matrix.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/cblapack.h \
+ $(USRDIR)/src/linear_dependent.h \
+ $(USRDIR)/src/set_myparameter.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/heur_forward.o: $(USRDIR)/src/heur_forward.c \
+ $(USRDIR)/src/heur_forward.h \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/matrix.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/cblapack.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/heur_backward.o: $(USRDIR)/src/heur_backward.c \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/heur_backward.h \
+ $(USRDIR)/src/matrix.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/cblapack.h \
+ $(USRDIR)/src/set_myparameter.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/branch_myrule.o: $(USRDIR)/src/branch_myrule.c \
+ $(USRDIR)/src/branch_myrule.h \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/set_myparameter.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+$(OBJDIR)/branch_myfullstrong.o: $(USRDIR)/src/branch_myfullstrong.c \
+ $(USRDIR)/src/branch_myfullstrong.h \
+ $(USRDIR)/src/probdata_linereg.h \
+ $(USRDIR)/src/vector.h \
+ $(USRDIR)/src/set_myparameter.h \
+ $(USRDIR)/src/cblapack.h \
+ $(USRDIR)/src/matrix.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+
+
+$(OBJDIR)/get_mybranchvarz.o: $(USRDIR)/src/get_mybranchvarz.c $(USRDIR)/src/get_mybranchvarz.h \
+ $(SCIPDIR)/src/scip/scip.h $(SCIPDIR)/src/scip/def.h \
+ $(SCIPDIR)/src/scip/type_retcode.h $(SCIPDIR)/src/scip/pub_message.h \
+ $(SCIPDIR)/src/scip/type_message.h $(SCIPDIR)/src/scip/struct_message.h \
+ $(SCIPDIR)/src/blockmemshell/memory.h $(SCIPDIR)/src/scip/type_result.h \
+ $(SCIPDIR)/src/scip/type_clock.h $(SCIPDIR)/src/scip/type_misc.h \
+ $(SCIPDIR)/src/scip/type_timing.h $(SCIPDIR)/src/scip/type_scip.h \
+ $(SCIPDIR)/src/scip/type_paramset.h $(SCIPDIR)/src/scip/type_event.h \
+ $(SCIPDIR)/src/scip/type_lp.h $(SCIPDIR)/src/scip/type_nlp.h \
+ $(SCIPDIR)/src/scip/type_var.h $(SCIPDIR)/src/scip/type_prob.h \
+ $(SCIPDIR)/src/scip/type_tree.h $(SCIPDIR)/src/scip/type_branch.h \
+ $(SCIPDIR)/src/scip/type_conflict.h $(SCIPDIR)/src/scip/type_cons.h \
+ $(SCIPDIR)/src/scip/type_sol.h $(SCIPDIR)/src/scip/type_dialog.h \
+ $(SCIPDIR)/src/scip/type_disp.h $(SCIPDIR)/src/scip/type_heur.h \
+ $(SCIPDIR)/src/scip/type_history.h $(SCIPDIR)/src/scip/type_nodesel.h \
+ $(SCIPDIR)/src/scip/type_presol.h $(SCIPDIR)/src/scip/type_pricer.h \
+ $(SCIPDIR)/src/scip/type_reader.h $(SCIPDIR)/src/scip/type_relax.h \
+ $(SCIPDIR)/src/scip/type_sepa.h $(SCIPDIR)/src/scip/type_prop.h \
+ $(SCIPDIR)/src/nlpi/type_nlpi.h $(SCIPDIR)/src/nlpi/type_expr.h \
+ $(SCIPDIR)/src/scip/pub_branch.h $(SCIPDIR)/src/scip/pub_conflict.h \
+ $(SCIPDIR)/src/scip/pub_cons.h $(SCIPDIR)/src/scip/struct_cons.h \
+ $(SCIPDIR)/src/scip/pub_cutpool.h $(SCIPDIR)/src/scip/type_cutpool.h \
+ $(SCIPDIR)/src/scip/pub_dialog.h $(SCIPDIR)/src/scip/pub_disp.h \
+ $(SCIPDIR)/src/scip/pub_event.h $(SCIPDIR)/src/scip/pub_fileio.h \
+ $(SCIPDIR)/src/scip/pub_heur.h $(SCIPDIR)/src/scip/pub_history.h \
+ $(SCIPDIR)/src/scip/struct_history.h $(SCIPDIR)/src/scip/pub_implics.h \
+ $(SCIPDIR)/src/scip/type_implics.h $(SCIPDIR)/src/scip/struct_implics.h \
+ $(SCIPDIR)/src/scip/pub_lp.h $(SCIPDIR)/src/scip/type_set.h \
+ $(SCIPDIR)/src/scip/type_stat.h $(SCIPDIR)/src/lpi/type_lpi.h \
+ $(SCIPDIR)/src/scip/struct_lp.h $(SCIPDIR)/src/scip/pub_nlp.h \
+ $(SCIPDIR)/src/scip/pub_misc.h $(SCIPDIR)/src/scip/struct_misc.h \
+ $(SCIPDIR)/src/scip/pub_nodesel.h $(SCIPDIR)/src/scip/pub_paramset.h \
+ $(SCIPDIR)/src/scip/pub_presol.h $(SCIPDIR)/src/scip/pub_pricer.h \
+ $(SCIPDIR)/src/scip/pub_reader.h $(SCIPDIR)/src/scip/pub_relax.h \
+ $(SCIPDIR)/src/scip/pub_sepa.h $(SCIPDIR)/src/scip/pub_prop.h \
+ $(SCIPDIR)/src/scip/pub_sol.h $(SCIPDIR)/src/scip/struct_sol.h \
+ $(SCIPDIR)/src/scip/pub_tree.h $(SCIPDIR)/src/scip/struct_tree.h \
+ $(SCIPDIR)/src/scip/pub_var.h $(SCIPDIR)/src/scip/struct_var.h \
+ $(SCIPDIR)/src/scip/implics.h $(SCIPDIR)/src/scip/history.h $(SCIPDIR)/src/lpi/lpi.h \
+ $(SCIPDIR)/src/nlpi/pub_expr.h $(SCIPDIR)/src/scip/intervalarith.h \
+ $(SCIPDIR)/src/nlpi/type_exprinterpret.h $(SCIPDIR)/src/nlpi/struct_expr.h \
+ $(SCIPDIR)/src/scip/presolve.h $(SCIPDIR)/src/scip/struct_scip.h \
+ $(SCIPDIR)/src/scip/type_interrupt.h $(SCIPDIR)/src/scip/type_mem.h \
+ $(SCIPDIR)/src/scip/type_primal.h $(SCIPDIR)/src/scip/type_pricestore.h \
+ $(SCIPDIR)/src/scip/type_sepastore.h $(SCIPDIR)/src/scip/set.h \
+ $(SCIPDIR)/src/scip/struct_set.h $(SCIPDIR)/src/scip/message.h \
+ $(SCIPDIR)/src/scip/tree.h $(SCIPDIR)/src/scip/misc.h $(SCIPDIR)/src/scip/var.h \
+ $(SCIPDIR)/src/scip/event.h $(SCIPDIR)/src/scip/struct_event.h \
+ $(SCIPDIR)/src/scip/scipdefplugins.h $(SCIPDIR)/src/scip/branch_allfullstrong.h \
+ $(SCIPDIR)/src/scip/branch_cloud.h $(SCIPDIR)/src/scip/branch_fullstrong.h \
+ $(SCIPDIR)/src/scip/branch_inference.h $(SCIPDIR)/src/scip/branch_leastinf.h \
+ $(SCIPDIR)/src/scip/branch_mostinf.h $(SCIPDIR)/src/scip/branch_pscost.h \
+ $(SCIPDIR)/src/scip/branch_random.h $(SCIPDIR)/src/scip/branch_relpscost.h \
+ $(SCIPDIR)/src/scip/cons_abspower.h $(SCIPDIR)/src/scip/cons_and.h \
+ $(SCIPDIR)/src/scip/cons_bivariate.h $(SCIPDIR)/src/scip/cons_bounddisjunction.h \
+ $(SCIPDIR)/src/scip/cons_conjunction.h $(SCIPDIR)/src/scip/cons_countsols.h \
+ $(SCIPDIR)/src/scip/cons_cumulative.h $(SCIPDIR)/src/scip/cons_disjunction.h \
+ $(SCIPDIR)/src/scip/cons_indicator.h $(SCIPDIR)/src/scip/cons_integral.h \
+ $(SCIPDIR)/src/scip/cons_knapsack.h $(SCIPDIR)/src/scip/cons_linear.h \
+ $(SCIPDIR)/src/scip/cons_linking.h $(SCIPDIR)/src/scip/cons_logicor.h \
+ $(SCIPDIR)/src/scip/cons_nonlinear.h $(SCIPDIR)/src/scip/cons_or.h \
+ $(SCIPDIR)/src/scip/cons_orbitope.h $(SCIPDIR)/src/scip/cons_pseudoboolean.h \
+ $(SCIPDIR)/src/scip/cons_quadratic.h $(SCIPDIR)/src/scip/cons_setppc.h \
+ $(SCIPDIR)/src/scip/cons_soc.h $(SCIPDIR)/src/scip/cons_sos1.h \
+ $(SCIPDIR)/src/scip/cons_sos2.h $(SCIPDIR)/src/scip/cons_superindicator.h \
+ $(SCIPDIR)/src/scip/cons_varbound.h $(SCIPDIR)/src/scip/cons_xor.h \
+ $(SCIPDIR)/src/scip/disp_default.h $(SCIPDIR)/src/scip/heur_actconsdiving.h \
+ $(SCIPDIR)/src/scip/heur_clique.h $(SCIPDIR)/src/scip/heur_coefdiving.h \
+ $(SCIPDIR)/src/scip/heur_crossover.h $(SCIPDIR)/src/scip/heur_dins.h \
+ $(SCIPDIR)/src/scip/heur_dualval.h $(SCIPDIR)/src/scip/heur_feaspump.h \
+ $(SCIPDIR)/src/scip/heur_fixandinfer.h $(SCIPDIR)/src/scip/heur_fracdiving.h \
+ $(SCIPDIR)/src/scip/heur_guideddiving.h $(SCIPDIR)/src/scip/heur_zeroobj.h \
+ $(SCIPDIR)/src/scip/heur_intdiving.h $(SCIPDIR)/src/scip/heur_intshifting.h \
+ $(SCIPDIR)/src/scip/heur_linesearchdiving.h \
+ $(SCIPDIR)/src/scip/heur_localbranching.h $(SCIPDIR)/src/scip/heur_mutation.h \
+ $(SCIPDIR)/src/scip/heur_nlpdiving.h $(SCIPDIR)/src/scip/heur_objpscostdiving.h \
+ $(SCIPDIR)/src/scip/heur_octane.h $(SCIPDIR)/src/scip/heur_oneopt.h \
+ $(SCIPDIR)/src/scip/heur_pscostdiving.h $(SCIPDIR)/src/scip/heur_proximity.h \
+ $(SCIPDIR)/src/scip/heur_randrounding.h $(SCIPDIR)/src/scip/heur_rens.h \
+ $(SCIPDIR)/src/scip/heur_rins.h $(SCIPDIR)/src/scip/heur_rootsoldiving.h \
+ $(SCIPDIR)/src/scip/heur_rounding.h $(SCIPDIR)/src/scip/heur_shiftandpropagate.h \
+ $(SCIPDIR)/src/scip/heur_shifting.h $(SCIPDIR)/src/scip/heur_simplerounding.h \
+ $(SCIPDIR)/src/scip/heur_subnlp.h $(SCIPDIR)/src/scip/heur_trivial.h \
+ $(SCIPDIR)/src/scip/heur_trysol.h $(SCIPDIR)/src/scip/heur_twoopt.h \
+ $(SCIPDIR)/src/scip/heur_undercover.h $(SCIPDIR)/src/scip/heur_vbounds.h \
+ $(SCIPDIR)/src/scip/heur_veclendiving.h $(SCIPDIR)/src/scip/heur_zirounding.h \
+ $(SCIPDIR)/src/scip/nodesel_bfs.h $(SCIPDIR)/src/scip/nodesel_breadthfirst.h \
+ $(SCIPDIR)/src/scip/nodesel_dfs.h $(SCIPDIR)/src/scip/nodesel_estimate.h \
+ $(SCIPDIR)/src/scip/nodesel_hybridestim.h $(SCIPDIR)/src/scip/nodesel_uct.h \
+ $(SCIPDIR)/src/scip/nodesel_restartdfs.h $(SCIPDIR)/src/scip/presol_boundshift.h \
+ $(SCIPDIR)/src/scip/presol_components.h \
+ $(SCIPDIR)/src/scip/presol_convertinttobin.h $(SCIPDIR)/src/scip/presol_domcol.h \
+ $(SCIPDIR)/src/scip/presol_dualinfer.h $(SCIPDIR)/src/scip/presol_gateextraction.h \
+ $(SCIPDIR)/src/scip/presol_implics.h $(SCIPDIR)/src/scip/presol_inttobinary.h \
+ $(SCIPDIR)/src/scip/presol_trivial.h $(SCIPDIR)/src/scip/prop_dualfix.h \
+ $(SCIPDIR)/src/scip/prop_genvbounds.h $(SCIPDIR)/src/scip/prop_obbt.h \
+ $(SCIPDIR)/src/scip/prop_probing.h $(SCIPDIR)/src/scip/prop_pseudoobj.h \
+ $(SCIPDIR)/src/scip/prop_redcost.h $(SCIPDIR)/src/scip/prop_rootredcost.h \
+ $(SCIPDIR)/src/scip/prop_vbounds.h $(SCIPDIR)/src/scip/reader_bnd.h \
+ $(SCIPDIR)/src/scip/reader_ccg.h $(SCIPDIR)/src/scip/reader_cip.h \
+ $(SCIPDIR)/src/scip/reader_cnf.h $(SCIPDIR)/src/scip/reader_fix.h \
+ $(SCIPDIR)/src/scip/reader_fzn.h $(SCIPDIR)/src/scip/reader_gms.h \
+ $(SCIPDIR)/src/scip/reader_lp.h $(SCIPDIR)/src/scip/reader_mps.h \
+ $(SCIPDIR)/src/scip/reader_opb.h $(SCIPDIR)/src/scip/reader_osil.h \
+ $(SCIPDIR)/src/scip/reader_pip.h $(SCIPDIR)/src/scip/reader_ppm.h \
+ $(SCIPDIR)/src/scip/reader_pbm.h $(SCIPDIR)/src/scip/reader_rlp.h \
+ $(SCIPDIR)/src/scip/reader_sol.h $(SCIPDIR)/src/scip/reader_wbo.h \
+ $(SCIPDIR)/src/scip/reader_zpl.h $(SCIPDIR)/src/scip/sepa_cgmip.h \
+ $(SCIPDIR)/src/scip/sepa_clique.h $(SCIPDIR)/src/scip/sepa_closecuts.h \
+ $(SCIPDIR)/src/scip/sepa_cmir.h $(SCIPDIR)/src/scip/sepa_flowcover.h \
+ $(SCIPDIR)/src/scip/sepa_gomory.h $(SCIPDIR)/src/scip/sepa_impliedbounds.h \
+ $(SCIPDIR)/src/scip/sepa_intobj.h $(SCIPDIR)/src/scip/sepa_mcf.h \
+ $(SCIPDIR)/src/scip/sepa_oddcycle.h $(SCIPDIR)/src/scip/sepa_rapidlearning.h \
+ $(SCIPDIR)/src/scip/sepa_strongcg.h $(SCIPDIR)/src/scip/sepa_zerohalf.h \
+ $(SCIPDIR)/src/scip/scipshell.h $(SCIPDIR)/src/nlpi/nlpi_ipopt.h
+
+$(OBJDIR)/matrix.o: $(USRDIR)/src/matrix.h $(USRDIR)/src/matrix.c
+$(OBJDIR)/vector.o: $(USRDIR)/src/vector.h $(USRDIR)/src/vector.c
+$(OBJDIR)/cblapack.o: $(USRDIR)/src/cblapack.h $(USRDIR)/src/cblapack.c
+$(OBJDIR)/linear_dependent.o: $(USRDIR)/src/linear_dependent.h $(USRDIR)/src/linear_dependent.c
+$(OBJDIR)/set_myparameter.o: $(USRDIR)/src/set_myparameter.h $(USRDIR)/src/set_myparameter.c
+$(OBJDIR)/divide_data.o: $(USRDIR)/src/divide_data.h $(USRDIR)/src/divide_data.c
+$(OBJDIR)/normalization.o: $(USRDIR)/src/normalization.h $(USRDIR)/src/normalization.c
+$(OBJDIR)/read_data.o: $(USRDIR)/src/read_data.h $(USRDIR)/src/read_data.c
